@@ -1,6 +1,4 @@
 # .dotfiles
-print("Hello")
-
 Dotfiles repository for my personal config files.
 
 # Requirements

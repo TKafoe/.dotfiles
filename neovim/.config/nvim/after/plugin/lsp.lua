@@ -13,7 +13,8 @@ require('mason-lspconfig').setup({
 	ensure_installed = {
 		"eslint",
 		"ruff",
-		"pyright"
+		"pyright",
+        "rust_analyzer",
 
 	},
 	handlers = {

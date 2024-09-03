@@ -38,5 +38,25 @@ return require('packer').startup(function(use)
 			{'L3MON4D3/LuaSnip'},
 		}
 	}
+    
+    use('github/copilot.vim')
 
+    use('airblade/vim-gitgutter')
+
+    use {
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+        config = function()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    use 'mg979/vim-visual-multi'
+
+    use 'nvim-tree/nvim-tree.lua'
 end)
