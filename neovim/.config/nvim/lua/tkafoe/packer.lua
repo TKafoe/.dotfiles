@@ -59,4 +59,12 @@ return require('packer').startup(function(use)
     use 'mg979/vim-visual-multi'
 
     use 'nvim-tree/nvim-tree.lua'
+
+    use {
+        "windwp/nvim-autopairs",
+        event = "InsertEnter",
+        config = function()
+            require("nvim-autopairs").setup {}
+        end
+    }
 end)
