@@ -15,8 +15,11 @@ require('mason-lspconfig').setup({
 		"ruff",
 		"pyright",
         "rust_analyzer",
-
-	},
+        "ts_ls",
+        "angularls",
+        "html",
+        "cssls",
+    },
 	handlers = {
 		function(server_name)
 			require('lspconfig')[server_name].setup({})
