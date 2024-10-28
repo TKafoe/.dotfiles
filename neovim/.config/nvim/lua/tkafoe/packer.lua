@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
 		end
 	})
 
+    use("rebelot/kanagawa.nvim")
+
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	use('theprimeagen/harpoon')

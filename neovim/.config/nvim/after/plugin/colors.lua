@@ -1,1 +1,3 @@
-require('rose-pine').setup()
+#require('rose-pine').setup()
+
+require('kanagawa').load('wave')
