@@ -1,3 +1,3 @@
 require("tkafoe.remap")
-require("tkafoe.packer")
 require("tkafoe.set")
+require("tkafoe.lazy")
