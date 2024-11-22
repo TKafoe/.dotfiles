@@ -19,7 +19,6 @@ require('mason-lspconfig').setup({
         "angularls",
         "html",
         "cssls",
-        "gopls"
     },
 	handlers = {
 		function(server_name)
