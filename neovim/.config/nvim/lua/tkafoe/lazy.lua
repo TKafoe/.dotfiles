@@ -26,15 +26,6 @@ require('lazy').setup({
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
 
-    -- Rose-pine theme with setup to apply colorscheme on load
-    {
-        'rose-pine/neovim',
-        name = 'rose-pine',
-        config = function()
-            vim.cmd('colorscheme rose-pine')
-        end
-    },
-
     -- Kanagawa theme
     { "rebelot/kanagawa.nvim" },
 
