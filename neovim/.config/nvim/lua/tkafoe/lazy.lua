@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     if vim.v.shell_error ~= 0 then
         vim.api.nvim_echo({
             { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-            { out, "WarningMsg" },
+            { out,                            "WarningMsg" },
             { "\nPress any key to exit..." },
         }, true, {})
         vim.fn.getchar()
@@ -43,20 +43,12 @@ require('lazy').setup({
 
     -- Fugitive for Git integration
     { 'tpope/vim-fugitive' },
-
     -- LSP-zero and its dependencies
-    {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v3.x',
-        dependencies = {
-            'williamboman/mason.nvim',
-            'williamboman/mason-lspconfig.nvim',
-            'neovim/nvim-lspconfig',
-            'hrsh7th/nvim-cmp',
-            'hrsh7th/cmp-nvim-lsp',
-            'L3MON4D3/LuaSnip'
-        }
-    },
+    { 'neovim/nvim-lspconfig' },
+    { 'hrsh7th/cmp-nvim-lsp' },
+    { 'hrsh7th/nvim-cmp' },
+    { 'williamboman/mason-lspconfig.nvim' },
+    { 'williamboman/mason.nvim' },
 
     -- GitHub Copilot
     { 'github/copilot.vim' },
@@ -69,7 +61,7 @@ require('lazy').setup({
         'goolord/alpha-nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
+            require 'alpha'.setup(require 'alpha.themes.startify'.config)
         end
     },
 
@@ -96,4 +88,4 @@ require('lazy').setup({
             require("nvim-autopairs").setup {}
         end
     },
-   })
+})
