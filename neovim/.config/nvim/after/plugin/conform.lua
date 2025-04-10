@@ -10,7 +10,6 @@ require("conform").setup({
         scss = { "prettierd", },
         markdown = { "prettierd", },
         json = { "prettierd", },
-        yaml = { "prettierd", },
         graphql = { "prettierd", },
         md = { "prettierd", },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
