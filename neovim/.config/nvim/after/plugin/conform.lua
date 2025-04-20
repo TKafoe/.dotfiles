@@ -10,13 +10,13 @@ require("conform").setup({
         scss = { "prettierd", },
         markdown = { "prettierd", },
         json = { "prettierd", },
-        yaml = { "prettierd", },
         graphql = { "prettierd", },
         md = { "prettierd", },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
         rust = { "rustfmt" },
         go = { "gofmt" },
-        sql = { "sqlfmt" }
+        sql = { "sqlfmt" },
+        sh = { "shfmt" }
     },
     -- Set default options
     default_format_opts = {
