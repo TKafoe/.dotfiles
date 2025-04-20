@@ -15,6 +15,8 @@ require("conform").setup({
         md = { "prettierd", },
         python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
         rust = { "rustfmt" },
+        go = { "gofmt" },
+        sql = { "sqlfmt" }
     },
     -- Set default options
     default_format_opts = {
