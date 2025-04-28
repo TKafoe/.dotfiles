@@ -113,7 +113,7 @@ window_behavior:
     fullscreen:
       # Maximize the window if possible. If the window doesn't have a
       # maximize button, then it'll be fullscreen'ed normally instead.
-      maximized: false
+      maximized: true
 
       # Whether to show fullscreen windows as always on top.
       shown_on_top: false
@@ -147,10 +147,6 @@ window_rules:
       - window_process: { equals: 'Lively' }
         window_class: { regex: 'HwndWrapper' }
   
-  - commands: ["move --workspace 1"]
-    match:
-      - window_process: { regex: "wsl"}
-
   - commands: ["move --workspace 3"]
     match:
       - window_process: { regex: "msedge|chrome|firefox"}
