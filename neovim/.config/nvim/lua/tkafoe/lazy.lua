@@ -23,8 +23,15 @@ require('lazy').setup({
     {
         'nvim-telescope/telescope.nvim',
         version = '0.1.8',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'BurntSushi/ripgrep'
+
+        }
     },
+
+
+    { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
 
     -- Kanagawa theme
     { "rebelot/kanagawa.nvim" },
@@ -87,9 +94,6 @@ require('lazy').setup({
         end
     },
 
-    -- Vim Visual Multi
-    { 'mg979/vim-visual-multi' },
-
     -- Nvim-tree for file explorer
     { 'nvim-tree/nvim-tree.lua' },
 
@@ -118,6 +122,8 @@ require('lazy').setup({
             },
         },
     },
+
+    { "mfussenegger/nvim-lint" },
 
     {
         "folke/trouble.nvim",
@@ -156,5 +162,4 @@ require('lazy').setup({
             },
         },
     }
-
 })
