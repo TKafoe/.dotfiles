@@ -1,6 +1,7 @@
 require('lint').linters_by_ft = {
     go = { 'golangcilint' },
-    python = { 'mypy', 'ruff' }
+    python = { 'ruff' },
+    sql = { 'sqlfluff' },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {

@@ -161,5 +161,24 @@ require('lazy').setup({
                 desc = "Quickfix List (Trouble)",
             },
         },
+    },
+
+    {
+        "mfussenegger/nvim-dap"
+    },
+    {
+        "mfussenegger/nvim-dap-python"
+    },
+
+    { "nvim-java/nvim-java" },
+
+    {
+        'nvim-flutter/flutter-tools.nvim',
+        lazy = false,
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+        config = true,
     }
 })

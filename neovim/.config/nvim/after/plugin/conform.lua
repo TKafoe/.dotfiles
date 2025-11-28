@@ -16,7 +16,8 @@ require("conform").setup({
         rust = { "rustfmt" },
         go = { "gofmt" },
         sql = { "sqlfmt" },
-        sh = { "shfmt" }
+        sh = { "shfmt" },
+        astro = { "prettierd" },
     },
     -- Set default options
     default_format_opts = {
