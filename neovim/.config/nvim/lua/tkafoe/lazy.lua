@@ -167,8 +167,13 @@ require('lazy').setup({
         "mfussenegger/nvim-dap"
     },
     {
+        "rcarriga/nvim-dap-ui",
+        dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" }
+    },
+    {
         "mfussenegger/nvim-dap-python"
     },
+
 
     { "nvim-java/nvim-java" },
 

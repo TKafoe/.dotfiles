@@ -14,7 +14,7 @@ export PATH="$PATH:/Users/tomkafoe/.local/bin"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/tomkafoe/dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tomkafoe/dev/google-cloud-sdk/path.zsh.inc'; fi
@@ -29,8 +29,22 @@ alias pnvim='poetry run nvim .'
 alias ptest='poetry run pytest tests'
 alias ptestf='poetry run pytest --lf -vv'
 alias tna='tmux new-session -A -t'
+alias gs='git status'
 
 notify() {
     cat  # Pass through everything to terminal
     curl -s -d "${1:-Command finished!}" localhost/cmd_done
 }
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+cdf() {
+  local dir
+  dir=$(find ~/dev -maxdepth 4 -type d 2>/dev/null \
+    | fzf --select-1 --exit-0)
+  [ -n "$dir" ] && cd "$dir"
+}
+
+export PATH="$PATH":"$HOME/.pub-cache/bin"

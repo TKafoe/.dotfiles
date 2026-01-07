@@ -69,6 +69,7 @@ require('mason-lspconfig').setup({
         "html",
         "cssls",
         "lua_ls",
+        "gopls"
     },
     handlers = {
         function(server_name)
